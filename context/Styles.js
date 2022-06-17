@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
 
-
 export const Colors = {
     primary: '#ffffff',
     black: '#000000',
@@ -38,6 +37,7 @@ export const darkTheme = {
       finish: '#15753B',
       link: '#2986cc',
     },
+
   };
 
 export const lightTheme = {
@@ -56,6 +56,7 @@ export const lightTheme = {
       finish: '#099C3A',
       link: '#2986cc',
     },
+
   }
 
   export const fonts = {
@@ -64,7 +65,12 @@ export const lightTheme = {
     H2: 16,
     H3: 14,
     text: 12,
-    button: 20
+    button: 20,
+    fontFamily1:'noto',
+    fontFamily2:'notodisplay',
+    fontFamily3:'sourcenoto',
+    fontFamily1bold:'notobold',
+    fontFamily3bold:'sourcenotobold'
   }
 
 export const InnerContainer = styled.View`

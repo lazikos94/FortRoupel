@@ -6,7 +6,7 @@ import H1 from "./H1";
 import { dictionaryList } from "../configs/language/language";
 
 
-function PageHeader({ children, styles, navigation }) {
+function PageHeader({ children, styles, navigation,title }) {
   const { colors } = useTheme();
 
   const state = useMain();
@@ -14,36 +14,33 @@ function PageHeader({ children, styles, navigation }) {
   const local_styles = {
         top: 0,
         left: 0,
-        height: '7%',
+        height: '6%',
         width: "100%",
         paddingRight:15,
         paddingLeft:15,
-        flexDirection:'row',
-        justifyContent:'space-between',
-        backgroundColor: colors.backgroundDarker,
+        position:'relative'
+        //backgroundColor: colors.backgroundDarker,
   };
-
-  useEffect(()=>{
-    console.log(state)
-  },[])
   
   return (
     <View style={{ ...local_styles }}>
-      <TouchableOpacity
-            onPress={() => navigation.navigate('Home')}>
-        <View
-          style={{
-          
-            flex: 1,
-            flexDirection: "row",
-            alignItems: "center",
+      <TouchableOpacity  style={{
+        justifyContent:'center',
+        alignItems:'center',
+        width:'100%',
             height: "100%"
           }}
-        >
-          <H1 styles={{color: colors.font, margin: 0, padding: 0}}>{state.language.dictionary.title}</H1>
+            onPress={() => navigation.navigate('Home')}>
+        <View>
+          <H1 styles={{color: colors.font}}>{title}</H1>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity onPress={()=>{
+      <TouchableOpacity style={{
+          position:'absolute',
+          justifyContent:'center',
+          right:0, 
+          height: "100%"
+          }} onPress={()=>{
         if(state.language.userLanguage=='gr'){
           state.setLanguage({
             userLanguage:'en',
@@ -56,19 +53,13 @@ function PageHeader({ children, styles, navigation }) {
           })
         }
       }}>
-        <View style={{
-           
-            flex: 1,
-            flexDirection: "row",
-            alignItems: "center",
-            height: "100%"
-          }}>
+        <View style={{padding:5}}>
          {state.language.userLanguage=='gr'?
           <Image
           source={require("../assets/gr.png")}
           style={{ width: 45, height: 30}}
           />:<Image
-          source={require("../assets/us.png")}
+          source={require("../assets/gb.jpg")}
           style={{ width: 45, height: 30}}
           />
          }   

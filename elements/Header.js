@@ -4,7 +4,7 @@ import { useTheme } from "@react-navigation/native";
 import useMain from "../context/Main";
 import Btn from "./Btn";
 
-import { Dimensions, Platform, StatusBar } from "react-native";
+import { Dimensions, Platform, StatusBar,ScrollView } from "react-native";
 
 function Header({navigation}) {
   const { colors } = useTheme();
@@ -20,6 +20,7 @@ function Header({navigation}) {
     flex: 1,
     padding: 7,
     margin: 0,
+    width:100,
     flexDirection: "row",
     borderRadius: 42,
   };
@@ -46,6 +47,7 @@ function Header({navigation}) {
         backgroundColor: colors.backgroundDarker,
       }}
     >
+      <ScrollView horizontal={true}>
        <Btn onPress={() => navigation.navigate('Home')} styles={btnStyle}>
         <Text style={{color:colors.text}}>{state.language.dictionary.home}</Text>
       </Btn>
@@ -58,6 +60,10 @@ function Header({navigation}) {
       <Btn onPress={() => navigation.navigate("Monument")} styles={btnStyle}>
         <Text style={{color: colors.text}}>{state.language.dictionary.monument}</Text>
       </Btn>
+            <Btn onPress={() => navigation.navigate("Map")} styles={btnStyle}>
+        <Text style={{color: colors.text}}>{state.language.dictionary.map}</Text>
+      </Btn>
+      </ScrollView>
     </View>
   );
 }

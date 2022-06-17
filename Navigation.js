@@ -6,6 +6,7 @@ import Homepage from './screens/Homepage';
 import Tunnel from "./screens/Tunnel";
 import Museum from "./screens/Museum";
 import Monument from "./screens/Monument";
+import Interactive from "./screens/Interactive";
 import { darkTheme, lightTheme } from './context/Styles'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -28,6 +29,7 @@ export default function Navigation(){
                    <Stack.Screen name="Museum" component={Museum}/>
                    <Stack.Screen name="Tunnel" component={Tunnel}/>
                    <Stack.Screen name="Monument" component={Monument}/>
+                   <Stack.Screen name="Map" component={Interactive}/>
                 </Stack.Navigator>
             </NavigationContainer>
         </ContextProvider>

@@ -10,12 +10,19 @@
     "museum":"Museum",
     "home":"Home",
     "contact":"Contact",
-    "number":"Phone",
+    "number":"Contact Number",
     "email":"Email",
-    "welcome":"Welcome to the application of Fort Rupel",
-    "info":"Below you will find information regarding the fort and the area around it and information regarding the tour of the fort",
+    "welcome":"The 10th Infantry Regiment welcomes you to the application of the heroic Fort Roupel",
+    "info":"Get to know the construction Miracle of the Greek fortification that was achieved in the period 1936-1941 and the heroic resistance of the fortress in April 1941.",
     "services":"Services",
     "canteen":"Canteen",
-    "parking":"Parking"
-    
+    "parking":"Parking",
+    "tunnelintro":"Discover the underground tunnels of Fort Roupel",
+    "entrance":"Below we can see the entrace of the Command Station of Roupel, the only visitable tunnel of Roupel",
+    "museumintro":"Discover the war museum of Fort Roupel",
+    "museumentrance":"Below we see the exhibit room with objects of the World War II era of the museum",
+    "monumentintro":"We are at the hill of Command Station of Roupel",
+    "monumenthill":"Τhe monument of the fallen was built in the 60s and 70s",
+    "map":"Map"
+
 }
