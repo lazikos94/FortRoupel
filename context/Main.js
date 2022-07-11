@@ -13,27 +13,6 @@ export const ContextProvider = ({ children }) => {
     })
     const [theme,setTheme] = useState()
 
-    // const readStorage = async ()=>{
-    //   try {
-    //     const storage = await AsyncStorage.getItem('@language')
-    //     console.log("storage",storage)
-    //     if(storage){
-    //       console.log('HERE')
-    //       setLanguage({
-    //         userLanguage:storage,
-    //         dictionary:dictionaryList[storage]
-    //       })
-    //     }
-    //   } catch (error) {
-    //     console.log(error)
-    //   }
-    // }
-    // useEffect(()=>{
-    //   readStorage();
-    //   console.log(language)
-    //   return;
-    // },[])
-
     return (
       <mainContext.Provider
         value={{

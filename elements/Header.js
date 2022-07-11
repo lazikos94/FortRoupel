@@ -3,7 +3,7 @@ import { View, Text, useWindowDimensions } from "react-native";
 import { useTheme } from "@react-navigation/native";
 import useMain from "../context/Main";
 import Btn from "./Btn";
-
+import { ContentContainer, StyledButton, ButtonText, fonts } from '../context/Styles'
 import { Dimensions, Platform, StatusBar,ScrollView } from "react-native";
 
 function Header({navigation}) {
@@ -33,12 +33,13 @@ function Header({navigation}) {
   let h = navbarHeight
 
   return (
+    
     <View
       style={{
         position: "absolute",
         left: 0,
         bottom:0,
-        height: '7%',
+        height: 'auto',
         width: "100%",
         flex: 1,
         flexDirection: "row",
@@ -47,23 +48,23 @@ function Header({navigation}) {
         backgroundColor: colors.backgroundDarker,
       }}
     >
-      <ScrollView horizontal={true}>
+    {/* <ScrollView horizontal={true}> */}
        <Btn onPress={() => navigation.navigate('Home')} styles={btnStyle}>
-        <Text style={{color:colors.text}}>{state.language.dictionary.home}</Text>
+        <Text style={{color:colors.text,fontFamily:fonts.fontFamily1,textAlign:'center'}}>{state.language.dictionary.home}</Text>
       </Btn>
       <Btn onPress={() => navigation.navigate('Tunnel')} styles={btnStyle}>
-        <Text style={{color:colors.text}}>{state.language.dictionary.tunnel}</Text>
+        <Text style={{color:colors.text,fontFamily:fonts.fontFamily1,textAlign:'center'}}>{state.language.dictionary.tunnel}</Text>
       </Btn>
       <Btn onPress={() => navigation.navigate('Museum')} styles={btnStyle}>
-        <Text style={{color: colors.text}}>{state.language.dictionary.museum}</Text>
+        <Text style={{color: colors.text,fontFamily:fonts.fontFamily1,textAlign:'center'}}>{state.language.dictionary.museum}</Text>
       </Btn>
       <Btn onPress={() => navigation.navigate("Monument")} styles={btnStyle}>
-        <Text style={{color: colors.text}}>{state.language.dictionary.monument}</Text>
+        <Text style={{color: colors.text,fontFamily:fonts.fontFamily1,textAlign:'center'}}>{state.language.dictionary.monument}</Text>
       </Btn>
-            <Btn onPress={() => navigation.navigate("Map")} styles={btnStyle}>
-        <Text style={{color: colors.text}}>{state.language.dictionary.map}</Text>
-      </Btn>
-      </ScrollView>
+            {/* <Btn onPress={() => navigation.navigate("Map")} styles={btnStyle}>
+        <Text style={{color: colors.text,fontFamily:fonts.fontFamily1,textAlign:'center'}}>{state.language.dictionary.map}</Text>
+      </Btn> */}
+      {/* </ScrollView> */}
     </View>
   );
 }
