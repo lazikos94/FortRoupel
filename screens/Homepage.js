@@ -27,7 +27,7 @@ function Homepage({navigation}) {
 
         {
           title: state.language.dictionary.opentime,
-          content: state.language.dictionary.morning+": 09:00 - 13:00\n"+state.language.dictionary.afternoon+": 17:00 - 20:00",
+          content: state.language.dictionary.morning+": 09:00 - 13:30\n"+state.language.dictionary.afternoon+": 09:00 - 13:30 "+state.language.dictionary.and+" 17:00 - 20:30",
         },
         {
           title: state.language.dictionary.contact,

@@ -4,7 +4,7 @@ import { Text, View, Image, TouchableOpacity } from "react-native";
 import useMain from "../context/Main";
 import H1 from "./H1";
 import { dictionaryList } from "../configs/language/language";
-
+import { ContentContainer, StyledButton, ButtonText, fonts } from '../context/Styles'
 
 function PageHeader({ children, styles, navigation,title }) {
   const { colors } = useTheme();
@@ -32,7 +32,7 @@ function PageHeader({ children, styles, navigation,title }) {
           }}
             onPress={() => navigation.navigate('Home')}>
         <View>
-          <H1 styles={{color: colors.font}}>{title}</H1>
+          <H1 styles={{color: colors.font,fontFamily:fonts.fontFamily1bold}}>{title}</H1>
         </View>
       </TouchableOpacity>
       <TouchableOpacity style={{

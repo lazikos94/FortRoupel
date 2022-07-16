@@ -4,7 +4,7 @@
     "slug": "FortRoupel",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/AppIcons/android/mipmap-xxxhdpi/ic_launcher_round.png",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
@@ -22,9 +22,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/AppIcons/android/mipmap-xxxhdpi/ic_launcher_round.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.roupel.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
